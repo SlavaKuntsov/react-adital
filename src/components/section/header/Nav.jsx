@@ -1,6 +1,6 @@
 import tw from "tailwind-styled-components"
 
-import PurpleButton from '../../buttons/BigButton'
+import BigButton from '../../buttons/BigButton'
 
 
 export default function Nav (props) {
@@ -25,7 +25,7 @@ export default function Nav (props) {
 							</Link>
 						})}
 					</div>
-					<PurpleButton>Let’s Talk</PurpleButton>
+					<BigButton color='purple' size='20'>Let’s Talk</BigButton>
 				</div>
 			</NavC>
 		</Container>

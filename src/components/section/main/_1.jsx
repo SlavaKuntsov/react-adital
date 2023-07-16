@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import ServiceCard from '../../cards/ServiceCard'
 import Heading from '../../text/Heading'
 
+
 export default function _1(props) {
 	let cards = [
 		{
@@ -47,6 +48,7 @@ export default function _1(props) {
 				{cards.map((card, id) => {
 					return (
 						<ServiceCard
+							key={id}
 							active={card.active}
 							logo={card.logo}
 							heading={card.heading}

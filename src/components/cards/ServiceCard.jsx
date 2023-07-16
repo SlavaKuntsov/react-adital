@@ -39,7 +39,7 @@ export default function ServiceCard({ active, logo, heading }) {
 					text. It has roots in a piece of classical Latin
 				</GraySmallP>
 				<div className="read-more flex flex-row items-center justify-end gap-4 mt-3">
-					<p className='font-pop text-base font-medium text-[#FF7642]'>Read more</p>
+					<p className='font-pop text-base font-medium text-orange'>Read more</p>
 					<img src={arrow} alt="arrow" width={19} height={16}/>
 				</div>
 			</div>

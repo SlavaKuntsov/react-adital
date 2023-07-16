@@ -1,9 +1,25 @@
+import classNames from 'classnames'
 import tw from 'tailwind-styled-components'
 
-export default function BigButton({children, color, width}) {
+export default function BigButton({children, color, size}) {
 	return (
-		<div className='links-big w-[220px] h-full rounded-[37px] bg-purple flex items-center justify-center'>
-			<Link $size='18px'>{children}</Link>
+		<div className={
+			classNames(
+				'links-big rounded-[37px] flex items-center justify-center h-[75px]',
+				{'bg-purple px-14' : color === 'purple'},
+				{'bg-turquoise px-12' : color === 'turquoise'}
+			)
+		}>
+			<Link className={
+				classNames(
+					{'text-base': size === "16"},
+					{'text-lg': size === "18"},
+					{'text-xl': size === "20"},
+					{'text-2xl': size === "22"},
+					{'text-white': color === 'purple'},
+					{'text-black': color === 'turquoise'},
+				)
+			}>{children}</Link>
 		</div>
 	)
 }
@@ -12,9 +28,7 @@ const Link = tw.p`
 	h-4
 	link
 	font-pop 
-	${s => (s.$size === '16px' ? 'text-[16px]' : 'text-[18px]')}
 	font-medium 
-	text-white 
 	flex 
 	items-center
 	z-20
